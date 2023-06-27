@@ -159,7 +159,7 @@ numberstyle = \tiny,
   \section*{\centering TÓM TẮT ĐỀ TÀI}\sectionmark{Tóm tắt đề tài}
   \textbf{Survival2D} là game bắn súng Battle Royale lấy ý tưởng từ game Player Unknown Battle Ground (PUBG). \textbf{Survival2D} sử dụng đồ hoạ 2D, không yêu cầu phần cứng cao; thích hợp chơi trên trình duyệt web, điện thoại, có thể tiếp cận với các nền tảng không thường được sử dụng để chơi game nhiều như Linux và MacOS.
   
-  Báo cáo này gồm 8 chương, bao gồm: giới thiệu đề tài, thiết kế game, công nghệ sử dụng, phân tích hệ thống, thiết kế hệ thống, đánh giá kết quả đạt được, định hướng phát triển và công cụ sử dụng.
+  Báo cáo này gồm 9 chương, bao gồm: giới thiệu đề tài, thiết kế game, công nghệ sử dụng, phân tích hệ thống, thiết kế hệ thống, kiểm thử, đánh giá kết quả đạt được, định hướng phát triển và công cụ sử dụng.
   
   Chương giới thiệu đề tài trình bày tổng quan về nội dung, mục tiêu và giới hạn của đề tài.
 
@@ -220,7 +220,7 @@ numberstyle = \tiny,
 
   \subsection{Mục tiêu của Survival2D}
 
-  Nhận ra thiếu sót của các tựa game Battle Royale hiện có, nhóm mong muốn tạo ra một tựa game mới, thể loại chiến đấu sinh tồn, tên là \textbf{Survival2D}. \textbf{Survival2D} sẽ khắc phục những điểm chưa tốt của những tựa game đi trước, giải quyết được các vấn đề của dòng game battle royale, với các đặc điểm sau:
+  Nhận ra thiếu sót của các tựa game Battle Royale hiện có, nhóm mong muốn tạo ra một tựa game mới, thể loại chiến đấu sinh tồn, tên là \textbf{Survival2D}. \textbf{Survival2D} sẽ khắc phục những điểm chưa tốt của những tựa game đi trước, giải quyết được các vấn đề của dòng game Battle Royale, với các đặc điểm sau:
   
   \begin{itemize}
       \item \textit{Thể loại Battle Royale multiplayer, đồ hoạ 2D}: Game nhiều người chơi cùng lúc, đồ hoạ đơn giản, không yêu cầu cấu hình cao, có thể chơi trên đa nền tảng, dễ tiếp cận với nhiều người chơi ở các tập người chơi khác nhau.
@@ -231,7 +231,7 @@ numberstyle = \tiny,
   
   \subsection{Giới hạn}
   
-  Trong quá trình phát triển \textbf{Survival2D}, nhóm nhận thấy một số chức năng hay, có thể đưa vào mở rộng game để tăng trải nghiệm người chơi nhưng vì giới hạn về nhân lực và thời gian, nhóm chưa hoàn thành được trong đề tài này, như là: Chơi theo nhóm, cho âm thanh vào game, phương tiện di chuyển, cho phép người chơi tương tác nhiều hơn với đồng đội (tin nhắn, thoại,...). Thay vào đó, nhóm sẽ ưu tiên phát triển đầy đủ các tính năng cơ bản của một game chiến đấu, và sau đó tập trung vào những vấn đề chính để hoàn thành mục tiêu của đề tài, bao gồm:
+  Trong quá trình phát triển \textbf{Survival2D}, nhóm nhận thấy một số chức năng hay, có thể đưa vào mở rộng game để tăng trải nghiệm người chơi nhưng vì giới hạn về nhân lực và thời gian, nhóm chưa hoàn thành được trong đề tài này, như là: chơi theo nhóm, cho âm thanh vào game, phương tiện di chuyển, cho phép người chơi tương tác nhiều hơn với đồng đội (tin nhắn, thoại,...). Thay vào đó, nhóm sẽ ưu tiên phát triển đầy đủ các tính năng cơ bản của một game chiến đấu, và sau đó tập trung vào những vấn đề chính để hoàn thành mục tiêu của đề tài, bao gồm:
 
   \begin{itemize}
       \item Hiện thực game đồ hoạ 2D trên nền tảng web (và có khả năng mở rộng lên đa nền tảng), thoả mãn yêu cầu:
@@ -284,7 +284,7 @@ numberstyle = \tiny,
 \hline
 \multicolumn{1}{|c|}{\textbf{Vật cản}} & \multicolumn{1}{c|}{\textbf{Hình dạng}} & \multicolumn{1}{c|}{\textbf{Kích thước}} & \multicolumn{1}{c|}{\textbf{Đặc tính}} \\ \hline
 Cây & Tròn & \begin{tabular}[c]{@{}l@{}}Thân cây: 50x50\\ Tán lá: 150x150\end{tabular} & \begin{tabular}[c]{@{}l@{}}Có thể bị phá huỷ\\ Bao gồm thân cây và tán lá\\ Có thể nấp dưới tán lá\end{tabular} \\ \hline
-Hộp & Vuông & 200x200 & \begin{tabular}[c]{@{}l@{}}Có thể bị phá huỷ\\ Khi bị phá huỷ rơi ra vật phẩm\end{tabular} \\ \hline
+Thùng & Vuông & 200x200 & \begin{tabular}[c]{@{}l@{}}Có thể bị phá huỷ\\ Khi bị phá huỷ rơi ra vật phẩm\end{tabular} \\ \hline
 Đá & Tròn & 100x100 & \begin{tabular}[c]{@{}l@{}}Có thể bị phá huỷ\\ Chủ yếu để tránh né đạn của địch\end{tabular} \\ \hline
 Tường & Vuông & 100x100 & \begin{tabular}[c]{@{}l@{}}Không thể bị phá huỷ\\ Liên kết với nhau để phân chia bản đồ\\ Tạo hình dạng giống mê cung\end{tabular} \\ \hline
 \end{tabular}
@@ -301,11 +301,6 @@ Tường & Vuông & 100x100 & \begin{tabular}[c]{@{}l@{}}Không thể bị phá 
 
   \subsection{Vũ khí}
   \textbf{Survival2D} có các loại vũ khí sau:
-  \begin{figure}[H]
-      \centering
-      \includegraphics[width=0.5\textwidth]{Img/game_screen_shoot/player_gun.png}
-      \caption{Các loại súng trong \textbf{Survival2D}. Từ trái qua: súng ngắn, súng săn và súng bắn tỉa}
-  \end{figure}
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|c|c|c|c|l|}
@@ -318,6 +313,12 @@ Súng bắn tỉa                          & 1500                               
 \end{tabular}
 \caption{Thông số các loại vũ khí trong \textbf{Survival2D}}
 \end{table}
+
+   \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{Img/game_screen_shoot/player_gun.png}
+      \caption{Các loại súng trong \textbf{Survival2D}. Từ trái qua: súng ngắn, súng săn và súng bắn tỉa}
+  \end{figure}
 
   \subsection{Trang bị}
   \textbf{Survival2D} có các loại trang bị sau:
@@ -385,7 +386,7 @@ Băng cứu thương & Hồi 20\% máu đã mất \\ \hline
       \item Ưu điểm:
       \begin{itemize}
           \item Miễn phí.
-          \item Phổ biến, dễ tiếp cận có sẵn nhiều tài liệu để học và cộng đồng đông đảo dễ tìm kiếm sự hỗ trợ, có nhiều asset và plugin.
+          \item Phổ biến, có sẵn nhiều tài liệu để học và cộng đồng đông đảo dễ tìm kiếm sự hỗ trợ, có nhiều asset và plugin.
           \item Hỗ trợ đa nền tảng.
           \item Cung cấp nhiều tính năng có sẵn: editor mạnh mẽ, trực quan, hỗ trợ xây dựng scene,... hỗ trợ yếu tố vật lý, âm thanh,...
       \end{itemize}
